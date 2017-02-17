@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+	<bean id="coreConfig" class="com.anzen.core.beans.CoreBean" scope="prototype">
+		<property name="persona"  ref="person"/>
+		<property name="user" ref="usuario"/>
+		<property name="insercionDaAO" ref="interface"/>
+	</bean>
+	
+	<bean id="person" class="com.anzen.core.beans.Persona" scope="prototype">
+		<property name="id" value="0" /> 
+		<property name="nombre" value="" /> 
+		<property name="apellidoPatermo" value="" /> 
+		<property name="apellidoMaterno" value="" /> 
+	</bean>
+	
+	<bean id="usuario" class="com.anzen.core.beans.User" scope="prototype">
+			<property name="userId" value="0" /> 
+			<property name="username" value="" /> 
+			<property name="createdBy" value="" /> 
+			<property name="createdDate" value="" /> 
+	</bean>
+	 
+	<bean id="interface" class="com.anzen.dao.imple.InsercionDAOImple" scope="prototype"/>
+	 
+</beans>
