@@ -16,10 +16,10 @@ public class Tets {
  
 		coreBean=(CoreBean) appContext.getBean("coreConfig");
 		 
-//		coreBean.getPersona().setId("ddd");
-//		coreBean.getPersona().setApellidoMaterno("lopez ww");
-//		coreBean.getPersona().setApellidoPatermo("Maerinez a");
-//		coreBean.getPersona().setNombre("reynaldo");
+		coreBean.getPersona().setId("ddd");
+		coreBean.getPersona().setApellidoMaterno("lopez ww");
+		coreBean.getPersona().setApellidoPatermo("Maerinez a");
+		coreBean.getPersona().setNombre("reynaldo");
 		
 		
 		String nomn=coreBean.getInsercionDaAO().consulta("Reynald");

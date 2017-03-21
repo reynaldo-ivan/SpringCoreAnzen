@@ -1,13 +1,15 @@
 package com.anzen.core.beans;
 
-import org.hibernate.Session; 
+import org.hibernate.Session;
+
+import com.anzen.dao.InsercionDAO;
 import com.anzen.dao.imple.InsercionDAOImple;
 
 public class CoreBean {
 	
-	private Persona persona;
-	private User user;
-	private InsercionDAOImple insercionDaAO;
+	private Persona persona=new Persona();
+	private User user=new User();
+	private InsercionDAOImple insercionDaAO=new InsercionDAO();
 	
 	private Session session;
 	
